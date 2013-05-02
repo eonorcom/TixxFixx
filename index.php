@@ -4,11 +4,15 @@ include($_SERVER['DOCUMENT_ROOT']."/include/config/dbconfig.php");
 //Always place this code at the top of the Page
 session_start();
 $Debug = "";
-$_SESSION['ShowTickets'] = 1;
 
-if ($_SESSION['ViewLanding'] != 1)
+if($ShowLandingPage == 1)
 {
-	header("Location: /RockTheRunway/");
+    $_SESSION['ShowTickets'] = 1;
+
+    if ($_SESSION['ViewLanding'] != 1)
+    {
+        header("Location: /RockTheRunway/");
+    }
 }
 
 //Array
