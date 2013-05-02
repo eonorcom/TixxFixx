@@ -1,0 +1,71 @@
+CREATE DATABASE  IF NOT EXISTS `tixxfixx` /*!40100 DEFAULT CHARACTER SET utf8 */;
+USE `tixxfixx`;
+-- MySQL dump 10.13  Distrib 5.5.16, for Win32 (x86)
+--
+-- Host: 127.0.0.1    Database: tixxfixx
+-- ------------------------------------------------------
+-- Server version	5.5.23
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8 */;
+/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
+/*!40103 SET TIME_ZONE='+00:00' */;
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+
+--
+-- Table structure for table `orders`
+--
+
+DROP TABLE IF EXISTS `orders`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `orders` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `UserID` int(11) DEFAULT NULL,
+  `UserInfoId` int(11) DEFAULT NULL,
+  `TransactionId` varchar(45) DEFAULT NULL,
+  `TransactionType` varchar(45) DEFAULT NULL,
+  `PaymentType` varchar(45) DEFAULT NULL,
+  `PayPalTime` varchar(45) DEFAULT NULL,
+  `Amt` decimal(10,2) DEFAULT NULL,
+  `CurrencyCode` varchar(3) DEFAULT NULL,
+  `FeeAmt` decimal(10,2) DEFAULT NULL,
+  `TaxAmt` decimal(10,2) DEFAULT NULL,
+  `PaymentStatus` varchar(45) DEFAULT NULL,
+  `PendingReason` varchar(45) DEFAULT NULL,
+  `ReasonCode` varchar(45) DEFAULT NULL,
+  `SellerApprove` int(11) DEFAULT '0',
+  `BuyerApprove` varchar(45) DEFAULT '0',
+  `OrderItems` text,
+  `resArray` text,
+  `OrderTime` datetime DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `id_UNIQUE` (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `orders`
+--
+
+LOCK TABLES `orders` WRITE;
+/*!40000 ALTER TABLE `orders` DISABLE KEYS */;
+INSERT INTO `orders` VALUES (1,1,2,'1JR34584U05888724','expresscheckout','instant','2013-03-29T21:34:31Z',0.30,'USD',0.30,0.00,'Completed','None','None',0,'0','{\"items\":[{\"CartID\":\"1\",\"TicketID\":\"16\",\"Qty\":\"1\",\"Price\":\"0\",\"SellerID\":\"1\"}]}','a:23:{s:5:\"TOKEN\";s:20:\"EC-6NW45186S93867241\";s:28:\"SUCCESSPAGEREDIRECTREQUESTED\";s:5:\"false\";s:9:\"TIMESTAMP\";s:20:\"2013-03-29T21:34:32Z\";s:13:\"CORRELATIONID\";s:12:\"89467a65f880\";s:3:\"ACK\";s:7:\"Success\";s:7:\"VERSION\";s:2:\"64\";s:5:\"BUILD\";s:7:\"5551055\";s:23:\"INSURANCEOPTIONSELECTED\";s:5:\"false\";s:23:\"SHIPPINGOPTIONISDEFAULT\";s:5:\"false\";s:27:\"PAYMENTINFO_0_TRANSACTIONID\";s:17:\"1JR34584U05888724\";s:29:\"PAYMENTINFO_0_TRANSACTIONTYPE\";s:15:\"expresscheckout\";s:25:\"PAYMENTINFO_0_PAYMENTTYPE\";s:7:\"instant\";s:23:\"PAYMENTINFO_0_ORDERTIME\";s:20:\"2013-03-29T21:34:31Z\";s:17:\"PAYMENTINFO_0_AMT\";s:4:\"0.30\";s:20:\"PAYMENTINFO_0_FEEAMT\";s:4:\"0.30\";s:20:\"PAYMENTINFO_0_TAXAMT\";s:4:\"0.00\";s:26:\"PAYMENTINFO_0_CURRENCYCODE\";s:3:\"USD\";s:27:\"PAYMENTINFO_0_PAYMENTSTATUS\";s:9:\"Completed\";s:27:\"PAYMENTINFO_0_PENDINGREASON\";s:4:\"None\";s:24:\"PAYMENTINFO_0_REASONCODE\";s:4:\"None\";s:35:\"PAYMENTINFO_0_PROTECTIONELIGIBILITY\";s:8:\"Eligible\";s:23:\"PAYMENTINFO_0_ERRORCODE\";s:1:\"0\";s:17:\"PAYMENTINFO_0_ACK\";s:7:\"Success\";}','2013-03-29 15:32:33'),(2,5,3,'97M06418JP8122825','expresscheckout','instant','2013-04-03T06:49:06Z',16.00,'USD',0.76,0.00,'Completed','None','None',0,'0','{\"items\":[{\"CartID\":\"3\",\"TicketID\":\"17\",\"Qty\":\"1\",\"Price\":\"15\",\"SellerID\":\"1\"}]}','a:23:{s:5:\"TOKEN\";s:20:\"EC-54Y83563C3940461Y\";s:28:\"SUCCESSPAGEREDIRECTREQUESTED\";s:5:\"false\";s:9:\"TIMESTAMP\";s:20:\"2013-04-03T06:49:06Z\";s:13:\"CORRELATIONID\";s:13:\"482c39938baa3\";s:3:\"ACK\";s:7:\"Success\";s:7:\"VERSION\";s:2:\"64\";s:5:\"BUILD\";s:7:\"5618210\";s:23:\"INSURANCEOPTIONSELECTED\";s:5:\"false\";s:23:\"SHIPPINGOPTIONISDEFAULT\";s:5:\"false\";s:27:\"PAYMENTINFO_0_TRANSACTIONID\";s:17:\"97M06418JP8122825\";s:29:\"PAYMENTINFO_0_TRANSACTIONTYPE\";s:15:\"expresscheckout\";s:25:\"PAYMENTINFO_0_PAYMENTTYPE\";s:7:\"instant\";s:23:\"PAYMENTINFO_0_ORDERTIME\";s:20:\"2013-04-03T06:49:06Z\";s:17:\"PAYMENTINFO_0_AMT\";s:5:\"16.00\";s:20:\"PAYMENTINFO_0_FEEAMT\";s:4:\"0.76\";s:20:\"PAYMENTINFO_0_TAXAMT\";s:4:\"0.00\";s:26:\"PAYMENTINFO_0_CURRENCYCODE\";s:3:\"USD\";s:27:\"PAYMENTINFO_0_PAYMENTSTATUS\";s:9:\"Completed\";s:27:\"PAYMENTINFO_0_PENDINGREASON\";s:4:\"None\";s:24:\"PAYMENTINFO_0_REASONCODE\";s:4:\"None\";s:35:\"PAYMENTINFO_0_PROTECTIONELIGIBILITY\";s:8:\"Eligible\";s:23:\"PAYMENTINFO_0_ERRORCODE\";s:1:\"0\";s:17:\"PAYMENTINFO_0_ACK\";s:7:\"Success\";}','2013-04-03 00:47:33'),(3,5,8,'6JF42276CN725611A','expresscheckout','instant','2013-04-03T16:38:04Z',16.64,'USD',0.78,0.00,'Completed','None','None',0,'0','{\"items\":[{\"CartID\":\"20\",\"TicketID\":\"17\",\"Qty\":\"1\",\"Price\":\"15\",\"SellerID\":\"1\"}]}','a:23:{s:5:\"TOKEN\";s:20:\"EC-2HK78610VY857033H\";s:28:\"SUCCESSPAGEREDIRECTREQUESTED\";s:5:\"false\";s:9:\"TIMESTAMP\";s:20:\"2013-04-03T16:38:04Z\";s:13:\"CORRELATIONID\";s:12:\"bcb38ddb6e2f\";s:3:\"ACK\";s:7:\"Success\";s:7:\"VERSION\";s:2:\"64\";s:5:\"BUILD\";s:7:\"5618210\";s:23:\"INSURANCEOPTIONSELECTED\";s:5:\"false\";s:23:\"SHIPPINGOPTIONISDEFAULT\";s:5:\"false\";s:27:\"PAYMENTINFO_0_TRANSACTIONID\";s:17:\"6JF42276CN725611A\";s:29:\"PAYMENTINFO_0_TRANSACTIONTYPE\";s:15:\"expresscheckout\";s:25:\"PAYMENTINFO_0_PAYMENTTYPE\";s:7:\"instant\";s:23:\"PAYMENTINFO_0_ORDERTIME\";s:20:\"2013-04-03T16:38:04Z\";s:17:\"PAYMENTINFO_0_AMT\";s:5:\"16.64\";s:20:\"PAYMENTINFO_0_FEEAMT\";s:4:\"0.78\";s:20:\"PAYMENTINFO_0_TAXAMT\";s:4:\"0.00\";s:26:\"PAYMENTINFO_0_CURRENCYCODE\";s:3:\"USD\";s:27:\"PAYMENTINFO_0_PAYMENTSTATUS\";s:9:\"Completed\";s:27:\"PAYMENTINFO_0_PENDINGREASON\";s:4:\"None\";s:24:\"PAYMENTINFO_0_REASONCODE\";s:4:\"None\";s:35:\"PAYMENTINFO_0_PROTECTIONELIGIBILITY\";s:8:\"Eligible\";s:23:\"PAYMENTINFO_0_ERRORCODE\";s:1:\"0\";s:17:\"PAYMENTINFO_0_ACK\";s:7:\"Success\";}','2013-04-03 10:36:28'),(4,6,23,'8KX53228BA010005C','expresscheckout','instant','2013-04-10T05:21:12Z',63.44,'USD',2.14,0.00,'Completed','None','None',0,'0','{\"items\":[{\"CartID\":\"42\",\"TicketID\":\"18\",\"Qty\":\"2\",\"Price\":\"30\",\"SellerID\":\"1\"}]}','a:23:{s:5:\"TOKEN\";s:20:\"EC-5RB92497H2415751G\";s:28:\"SUCCESSPAGEREDIRECTREQUESTED\";s:5:\"false\";s:9:\"TIMESTAMP\";s:20:\"2013-04-10T05:21:12Z\";s:13:\"CORRELATIONID\";s:12:\"93db27aaeef7\";s:3:\"ACK\";s:7:\"Success\";s:7:\"VERSION\";s:2:\"64\";s:5:\"BUILD\";s:7:\"5650305\";s:23:\"INSURANCEOPTIONSELECTED\";s:5:\"false\";s:23:\"SHIPPINGOPTIONISDEFAULT\";s:5:\"false\";s:27:\"PAYMENTINFO_0_TRANSACTIONID\";s:17:\"8KX53228BA010005C\";s:29:\"PAYMENTINFO_0_TRANSACTIONTYPE\";s:15:\"expresscheckout\";s:25:\"PAYMENTINFO_0_PAYMENTTYPE\";s:7:\"instant\";s:23:\"PAYMENTINFO_0_ORDERTIME\";s:20:\"2013-04-10T05:21:12Z\";s:17:\"PAYMENTINFO_0_AMT\";s:5:\"63.44\";s:20:\"PAYMENTINFO_0_FEEAMT\";s:4:\"2.14\";s:20:\"PAYMENTINFO_0_TAXAMT\";s:4:\"0.00\";s:26:\"PAYMENTINFO_0_CURRENCYCODE\";s:3:\"USD\";s:27:\"PAYMENTINFO_0_PAYMENTSTATUS\";s:9:\"Completed\";s:27:\"PAYMENTINFO_0_PENDINGREASON\";s:4:\"None\";s:24:\"PAYMENTINFO_0_REASONCODE\";s:4:\"None\";s:35:\"PAYMENTINFO_0_PROTECTIONELIGIBILITY\";s:8:\"Eligible\";s:23:\"PAYMENTINFO_0_ERRORCODE\";s:1:\"0\";s:17:\"PAYMENTINFO_0_ACK\";s:7:\"Success\";}','2013-04-09 23:18:45'),(5,15,39,'051381067B164115J','expresscheckout','instant','2013-04-20T21:23:57Z',32.24,'USD',1.23,0.00,'Completed','None','None',0,'0','{\"items\":[{\"CartID\":\"78\",\"TicketID\":\"17\",\"Qty\":\"2\",\"Price\":\"15\",\"SellerID\":\"1\"}]}','a:23:{s:5:\"TOKEN\";s:20:\"EC-8WJ47553D5895351T\";s:28:\"SUCCESSPAGEREDIRECTREQUESTED\";s:5:\"false\";s:9:\"TIMESTAMP\";s:20:\"2013-04-20T21:23:57Z\";s:13:\"CORRELATIONID\";s:13:\"48bc5d2382dfe\";s:3:\"ACK\";s:7:\"Success\";s:7:\"VERSION\";s:2:\"64\";s:5:\"BUILD\";s:7:\"5715372\";s:23:\"INSURANCEOPTIONSELECTED\";s:5:\"false\";s:23:\"SHIPPINGOPTIONISDEFAULT\";s:5:\"false\";s:27:\"PAYMENTINFO_0_TRANSACTIONID\";s:17:\"051381067B164115J\";s:29:\"PAYMENTINFO_0_TRANSACTIONTYPE\";s:15:\"expresscheckout\";s:25:\"PAYMENTINFO_0_PAYMENTTYPE\";s:7:\"instant\";s:23:\"PAYMENTINFO_0_ORDERTIME\";s:20:\"2013-04-20T21:23:57Z\";s:17:\"PAYMENTINFO_0_AMT\";s:5:\"32.24\";s:20:\"PAYMENTINFO_0_FEEAMT\";s:4:\"1.23\";s:20:\"PAYMENTINFO_0_TAXAMT\";s:4:\"0.00\";s:26:\"PAYMENTINFO_0_CURRENCYCODE\";s:3:\"USD\";s:27:\"PAYMENTINFO_0_PAYMENTSTATUS\";s:9:\"Completed\";s:27:\"PAYMENTINFO_0_PENDINGREASON\";s:4:\"None\";s:24:\"PAYMENTINFO_0_REASONCODE\";s:4:\"None\";s:35:\"PAYMENTINFO_0_PROTECTIONELIGIBILITY\";s:17:\"PartiallyEligible\";s:23:\"PAYMENTINFO_0_ERRORCODE\";s:1:\"0\";s:17:\"PAYMENTINFO_0_ACK\";s:7:\"Success\";}','2013-04-20 15:23:32'),(6,16,44,'2UN67322RU084774T','expresscheckout','instant','2013-04-21T16:31:22Z',16.64,'USD',0.78,0.00,'Completed','None','None',0,'0','{\"items\":[{\"CartID\":\"83\",\"TicketID\":\"17\",\"Qty\":\"1\",\"Price\":\"15\",\"SellerID\":\"1\"}]}','a:23:{s:5:\"TOKEN\";s:20:\"EC-42802692DL343273H\";s:28:\"SUCCESSPAGEREDIRECTREQUESTED\";s:5:\"false\";s:9:\"TIMESTAMP\";s:20:\"2013-04-21T16:31:22Z\";s:13:\"CORRELATIONID\";s:13:\"43e404aaad81a\";s:3:\"ACK\";s:7:\"Success\";s:7:\"VERSION\";s:2:\"64\";s:5:\"BUILD\";s:7:\"5715372\";s:23:\"INSURANCEOPTIONSELECTED\";s:5:\"false\";s:23:\"SHIPPINGOPTIONISDEFAULT\";s:5:\"false\";s:27:\"PAYMENTINFO_0_TRANSACTIONID\";s:17:\"2UN67322RU084774T\";s:29:\"PAYMENTINFO_0_TRANSACTIONTYPE\";s:15:\"expresscheckout\";s:25:\"PAYMENTINFO_0_PAYMENTTYPE\";s:7:\"instant\";s:23:\"PAYMENTINFO_0_ORDERTIME\";s:20:\"2013-04-21T16:31:22Z\";s:17:\"PAYMENTINFO_0_AMT\";s:5:\"16.64\";s:20:\"PAYMENTINFO_0_FEEAMT\";s:4:\"0.78\";s:20:\"PAYMENTINFO_0_TAXAMT\";s:4:\"0.00\";s:26:\"PAYMENTINFO_0_CURRENCYCODE\";s:3:\"USD\";s:27:\"PAYMENTINFO_0_PAYMENTSTATUS\";s:9:\"Completed\";s:27:\"PAYMENTINFO_0_PENDINGREASON\";s:4:\"None\";s:24:\"PAYMENTINFO_0_REASONCODE\";s:4:\"None\";s:35:\"PAYMENTINFO_0_PROTECTIONELIGIBILITY\";s:8:\"Eligible\";s:23:\"PAYMENTINFO_0_ERRORCODE\";s:1:\"0\";s:17:\"PAYMENTINFO_0_ACK\";s:7:\"Success\";}','2013-04-21 10:30:52');
+/*!40000 ALTER TABLE `orders` ENABLE KEYS */;
+UNLOCK TABLES;
+/*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
+
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
+
+-- Dump completed on 2013-05-02  1:17:41
