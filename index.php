@@ -5,13 +5,13 @@ include($_SERVER['DOCUMENT_ROOT']."/include/config/dbconfig.php");
 session_start();
 $Debug = "";
 
-if($ShowLandingPage == 1)
+if($ShowLandingPage != "")
 {
     $_SESSION['ShowTickets'] = 1;
 
     if ($_SESSION['ViewLanding'] != 1)
     {
-        header("Location: /RockTheRunway/");
+        header("Location: " . $ShowLandingPage );
     }
 }
 

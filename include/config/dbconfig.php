@@ -13,5 +13,5 @@ $database = mysql_select_db(DB_DATABASE) or die(mysql_error());
 
 global $ShowLandingPage;
 
-$ShowLandingPage = 0;
+$ShowLandingPage = "";
 ?>
