@@ -1,0 +1,386 @@
+/*
+	@author: lucien.immink
+	@version: 0.1 (work in progress)
+	@theme: fancy; based on from http://www.emblematiq.com/niceforms/v10/niceforms.html
+*/
+.fancy {
+	background: url(../images/fancy/theme.gif);
+}
+.fancy .checkbox {
+	background: url(../images/fancy/checkbox.gif) no-repeat 0 0;
+	width: 15px;
+	height: 13px;
+	margin: 2px 3px 2px 0;
+	cursor: pointer;
+	overflow: hidden;
+	float:left;
+	clear: left;
+}
+.fancy .checkboxactive {
+	background: url(../images/fancy/checkbox.gif) no-repeat 0 -13px;
+	width: 15px;
+	height: 13px;
+	margin: 2px 3px 2px 0;
+	cursor: pointer;
+	overflow: hidden;
+	float:left;
+	clear: left;
+}
+.fancy .radio {
+	background: url(../images/fancy/radio.gif) no-repeat 0 0;
+	width: 15px;
+	height: 14px;
+	margin: 3px 3px 3px 0;
+	cursor: pointer;
+	overflow: hidden;
+	float:left;
+	clear:left;
+}
+.fancy .radioactive {
+	background: url(../images/fancy/radio.gif) no-repeat 0 -14px;
+}
+.fancy label {
+	cursor: pointer;
+	color: #666666;
+	float:left;
+}
+.fancy label.active {
+	color: #000000;
+}
+.fancy .pulldown .select.width_160 {
+	background: url(../images/fancy/select_bg.gif) repeat-x 0 0;
+	width: 189px;
+	float:left;
+	margin: 0 10px 0 0;
+}
+.fancy .pulldown .select.width_320 {
+	background: url(../images/fancy/select_bg.gif) repeat-x 0 0;
+	width: 349px;
+	float:left;
+}
+.fancy .pulldown .select .left {
+	background: url(../images/fancy/select_left.gif) no-repeat 0 0;
+	float:left;
+	height: 21px;
+	width: 8px;
+}
+.fancy .pulldown .select .right {
+	background: url(../images/fancy/select_right.gif) no-repeat 0 0;
+	float:right;
+	height: 21px;
+	width: 21px;
+	cursor: pointer;
+}
+.fancy .pulldown .select.width_160 .right a{
+	width: 189px;
+	height: 21px;
+	margin-left: -168px;
+	display: block;
+	position: absolute;
+}
+.fancy .pulldown .select.width_320 .right a{
+	width: 349px;
+	height: 21px;
+	margin-left: -328px;
+	display: block;
+	position: absolute;
+}
+.fancy .pulldown .select .center {
+	color: #ffffff;
+	padding-top: 3px;
+	white-space: nowrap;	
+	font-size: 11px;
+	cursor: pointer;
+}
+.fancy .optionsDiv {
+	background: #6f7074;
+	font-size: 11px;
+	margin-left: 3px;
+	margin-top: -1px;
+	padding: 2px;
+	z-index: 20;	
+}
+.fancy .optionsDiv.width_160{
+	width: 180px;	
+}
+.fancy .optionsDiv.width_320{
+	width: 340px;	
+}
+.fancy .optionsDiv a {
+	color:#F2F2F2;
+	text-decoration:none;
+	padding:1px 4px;
+	display: block;
+	border:1px solid #6f7074;
+	cursor: pointer;
+	line-height: 15px;
+}
+.fancy .optionsDiv .hover {
+	color:#FFFFFF;
+	background:#5F6062;
+	border: 1px solid #cfd0d6;
+}
+
+.fancy .multiple {
+	width: 320px;
+}
+.fancy .multiple multiple {
+	background: transparent;
+	border: 0px;
+	margin: 5px;
+	padding: 0px;
+	height: 100px;
+	width: 300px;
+}
+.fancy .multiple .top {
+	background: url(../images/fancy/txtarea_tr.gif) no-repeat right 0;
+	height: 5px;
+	overflow: hidden;
+}
+.fancy .multiple .top .tl{
+	background: url(../images/fancy/txtarea_tl.gif) no-repeat 0 0;
+	width: 5px;
+	height: 5px;
+	overflow: hidden;
+}
+.fancy .multiple .center {
+	background: url(../images/fancy/txtarea_cntr.gif) repeat-y right 0;
+}
+.fancy .multiple .center .center_c {
+	overflow: auto;	
+	width: 97%;
+}
+.fancy .multiple .center .center_c .option {
+	cursor: pointer;
+	padding: 2px;
+	margin: 1px 0;
+	font-size: 11px;
+}
+.fancy .multiple .center .center_c .option.activated {
+	background-color: #3297ca;
+	color: #ffffff;
+}
+.fancy .multiple .center .center_l {
+	float:left;
+	width: 5px;
+	background: url(../images/fancy/txtarea_l.gif) repeat-y 0 0;
+}
+.fancy .multiple .bottom {
+	background: url(../images/fancy/txtarea_br.gif) no-repeat right 0;
+	height: 5px;
+	width: 320px;
+}
+.fancy .multiple .bottom .bl {
+	background: url(../images/fancy/txtarea_bl.gif) no-repeat 0 0;
+	width: 5px;
+	height: 5px;
+}
+.fancy .multiple.active .top {
+	background: url(../images/fancy/txtarea_tr_xon.gif) no-repeat right 0;
+}
+.fancy .multiple.active .top .tl{
+	background: url(../images/fancy/txtarea_tl_xon.gif) no-repeat 0 0;
+}
+.fancy .multiple.active .center {
+
+	background: url(../images/fancy/txtarea_cntr_xon.gif) repeat-y right 0;
+}
+.fancy .multiple.active .center .center_l {
+	background: url(../images/fancy/txtarea_l_xon.gif) repeat-y 0 0;
+}
+.fancy .multiple.active .bottom {
+	background: url(../images/fancy/txtarea_br_xon.gif) no-repeat right 0;
+}
+.fancy .multiple.active .bottom .bl {
+	background: url(../images/fancy/txtarea_bl_xon.gif) no-repeat 0 0;
+}
+
+.fancy .textfield .cornerLeft {
+	background: url(../images/fancy/input_left.gif) no-repeat 0 0;
+	width: 8px;
+	height: 23px;
+	float:left;
+	overflow:hidden;
+}
+.fancy .textfield .cornerRight {
+	background: url(../images/fancy/input_right.gif) no-repeat 0 0;
+	width: 8px;
+	height: 23px;
+	float:left;
+	overflow:hidden;
+}
+.fancy .textfield .textCenter {
+	background: url(../images/fancy/input_bg.gif) repeat-x 0 0;
+	display: block;
+	float:left;
+	border: 0px;
+	height: 23px;
+}
+.fancy .textfield input {
+	background: none;
+	border: 0px;
+	height: 15px;
+	padding: 2px 0 4px;
+	vertical-align: middle;
+	font-size: 12px;
+}
+.fancy .textfield .cornerLeftactive {
+	background: url(../images/fancy/input_left_xon.gif) no-repeat 0 bottom;
+	width: 8px;
+	height: 23px;
+	float:left;
+}
+.fancy .textfield .cornerRightactive {
+	background: url(../images/fancy/input_right_xon.gif) no-repeat 0 bottom;
+	width: 8px;
+	height: 23px;
+	float:left;
+}
+.fancy .textfield .textCenteractive {
+	background: url(../images/fancy/input_bg.gif) repeat-x 0 -23px;
+	display: block;
+	float:left;
+	height: 23px;
+}
+.fancy .textarea {
+	float:left;	
+}
+.fancy .textarea textarea {
+	background: transparent;
+	border: 0px;
+	padding: 5px;
+	resize: none;
+}
+.fancy .textarea .top {
+	background: url(../images/fancy/txtarea_tr.gif) no-repeat right 0;
+	height: 5px;
+	overflow: hidden;
+}
+.fancy .textarea .top .tl{
+	background: url(../images/fancy/txtarea_tl.gif) no-repeat 0 0;
+	width: 5px;
+	height: 5px;
+	overflow: hidden;
+}
+.fancy .textarea .center {
+	background: url(../images/fancy/txtarea_cntr.gif) repeat-y right 0;
+}
+.fancy .textarea .center .center_l {
+	float:left;
+	width: 5px;
+	background: url(../images/fancy/txtarea_l.gif) repeat-y 0 0;
+}
+.fancy .textarea .bottom {
+	background: url(../images/fancy/txtarea_br.gif) no-repeat right 0;
+	height: 5px;
+}
+.fancy .textarea .bottom .bl {
+	background: url(../images/fancy/txtarea_bl.gif) no-repeat 0 0;
+	width: 5px;
+	height: 5px;
+}
+.fancy .textarea.active .top {
+	background: url(../images/fancy/txtarea_tr_xon.gif) no-repeat right 0;
+}
+.fancy .textarea.active .top .tl{
+	background: url(../images/fancy/txtarea_tl_xon.gif) no-repeat 0 0;
+}
+.fancy .textarea.active .center {
+	background: url(../images/fancy/txtarea_cntr_xon.gif) repeat-y right 0;
+}
+.fancy .textarea.active .center .center_l {
+	background: url(../images/fancy/txtarea_l_xon.gif) repeat-y 0 0;
+}
+.fancy .textarea.active .bottom {
+	background: url(../images/fancy/txtarea_br_xon.gif) no-repeat right 0;
+}
+.fancy .textarea.active .bottom .bl {
+	background: url(../images/fancy/txtarea_bl_xon.gif) no-repeat 0 0;
+}
+.fancy .buttonLeft {
+	float:left;
+	height: 26px;
+	width: 6px;
+	background: url(../images/fancy/button_left.gif);	
+}
+.fancy .buttonLeftActive {
+	float:left;
+	height: 26px;
+	width: 6px;
+	background: url(../images/fancy/button_left_xon.gif);	
+}
+.fancy .button input {
+	background: none;
+	border: 0px;
+	color: #ffffff;	
+	height: 26px;
+	font-weight: bold;
+	padding: 0px 4px 4px 0;
+	width: auto;
+}
+.fancy .button {
+	float:left;
+	border: none;
+	cursor: pointer;
+	height: 26px;
+	background: url(../images/fancy/button_bg.gif) repeat-x 0 0 ;	
+}
+.fancy .buttonActive {
+	float:left;
+	border: none;
+	cursor: pointer;
+	height: 26px;
+	background: url(../images/fancy/button_bg.gif) repeat-x left bottom ;	
+}
+.fancy .buttonActive input {
+	background: none;
+	border: 0px;
+	color: #ffffff;	
+	height: 26px;
+	font-weight: bold;
+	padding: 0px 4px 4px 0;
+	width: auto;
+}
+.fancy .buttonRight {
+	float:left;
+	height: 26px;
+	width: 6px;
+	background: url(../images/fancy/button_right.gif);	
+}
+.fancy .buttonRightActive {
+	float:left;
+	height: 26px;
+	width: 6px;
+	background: url(../images/fancy/button_right_xon.gif);	
+}
+.fancy .file {
+	position: absolute;
+	z-index: 1;
+}
+.fancy .fileLeft {
+	float:left;
+	width: 7px;
+	height: 22px;
+	background: url(../images/fancy/input_left.gif) no-repeat 0 0;
+}
+.fancy .fileCenter {
+	background: url(../images/fancy/input_bg.gif) repeat-x 0 0;
+	float:left;
+	height: 16px;
+	line-height: 15px;
+	margin: 0;
+	padding: 3px 0;
+	overflow:hidden;	
+}
+.fancy .fileCenter .fileInput {
+	background: none;
+	border: none;
+	vertical-align: middle;
+	width: 163px;
+}
+.fancy .fileRight {
+	float:left;
+	width: 60px;
+	height: 22px;
+	background: url(../images/fancy/file.png) no-repeat left 1px;
+}

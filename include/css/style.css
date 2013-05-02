@@ -1,0 +1,1467 @@
+/* CSS Document for Design Look and Feel */
+	
+	@import url("pop.css");
+
+	
+	body 
+	{
+		background: #3f3f3f url(/images/bg.png) repeat scroll center 0;
+		margin: 0;
+		padding: 0;
+		font-family: Arial, Helvetica, sans-serif;
+		font-size: 15px;
+		color: #3C424E;
+		 overflow-x: visible;
+		 overflow-y: visible;
+	}
+	
+	a
+	{
+		color: #3C424E;
+		cursor: pointer;
+		text-decoration: none;	
+	}
+	
+	
+	small 
+	{
+		font-size:9px;
+	}
+	h2 small {
+		font-size: 9px;
+	}
+	
+	a:hover
+	{
+		text-decoration: none;
+	}
+	
+		
+	h3 a
+	{
+		color: #3C424E;
+	}
+	
+	
+	td
+	{
+		color: #3C424E;
+	}
+	
+	h1 {margin: 0px; font-weight: normal}
+	h2 {margin: 0px; font-weight: normal; font-size: 24px;}
+	h3 {margin: 0px; font-weight: normal; font-size: 18px;}
+	h4 {margin: 0px; font-weight: normal; font-size: 14px;}
+	
+	h1, h2, h3 {
+		line-height: normal;
+	}
+	li {
+		line-height: normal;
+	}
+	hr {
+	  margin: 20px 0;
+	  border: 0;
+	  border-top: 1px solid #eeeeee;
+	  border-bottom: 1px solid #ffffff;
+	}	
+	
+	.columnar
+	{
+		list-style-type: none;	
+		margin: 0;
+		padding: 0;
+	}
+	.columnar li
+	{
+		margin: 0;
+		padding: 5px;
+		float: left;
+		font-size: 12px;
+		line-height: 20px;
+	}
+	
+	.event-liked-title
+	{
+		background: #bd1e2d;	
+		color: #fff;
+		font-size: 15px;
+		padding: 5px;
+	}
+	
+	.event-liked-title a
+	{
+		color: #fff;
+	}
+	
+	#event-categories
+	{
+		background-color: #fff;
+	}
+	
+	#event-dates
+	{
+		background-color: #fff;
+		height: 70px;
+	}
+	#skin {
+		width: 100%;
+		height: 600px;
+		position:absolute;
+		margin-left: 30px;
+		z-index: 1;	
+		background: url(/images/skin/bg.png) no-repeat scroll center 0;
+	}
+	
+	#skin_link {
+		margin: 0 auto;
+		width: 1400px;
+		height: 600px;
+		cursor: pointer;	
+	}
+	
+	#header 
+	{
+		background: url(/images/sprite_bgs.png);	
+		width: 100%;
+		margin: 0 auto;
+		box-shadow: 0 2px 3px rgba(0, 0, 0, 0.25);
+		height: 40px;
+		z-index:1000;
+		position: relative;
+	}
+	
+	#loggedin
+	{
+		float:left;
+	}
+	
+	#header_content
+	{
+		width: 920px;
+		margin: 0 auto;	
+		color: #fff;
+		padding: 10px 0 0 60px;
+		height: 40px;
+		text-align: right;
+	}
+	
+	#header_content a
+	{
+		color: #fff;	
+		text-decoration: none;
+	}
+	
+	#header_content ul
+	{
+		margin: 0;
+		padding: 0;
+		list-style-type:none;
+	}
+	
+	#header_content ul li
+	{
+		padding: 0 0 0 20px;
+		float:right;
+		cursor: pointer;
+	}
+	
+	#container
+	{
+		width: 1050px;
+		height: 862px;
+		margin: 0 auto;	
+		background: url(/images/home_bg.png) no-repeat;	
+	}
+	
+	#container_contribute
+	{
+		width: 1050px;
+		height: 862px;
+		margin: 0 auto;	
+		background: url(/images/contribute_bg.png) no-repeat;	
+	}
+	
+	#container_page
+	{
+		width: 1104px;
+		height: 862px;
+		margin: 0 auto;	
+		background: url(/images/content_header.png) no-repeat scroll 55px 0;	
+		z-index:1000;
+		position: relative;
+	}
+	
+	#content
+	{
+		margin: 0 auto;
+		background-color: #fff;
+		padding: 20px;
+	}
+	
+	#content_page
+	{
+		margin: 0 auto;
+		width: 1050px;
+		padding: 0 0 198px;
+	}
+	
+	#contet_body
+	{
+		margin: 11px 0 0 56px;
+		padding: 20px 72px 0 72px;
+		background: url(/images/content_bg.png) top  center repeat-y;
+	}
+	
+	#logo
+	{	
+		margin: 30px 0px 0px 45px;
+		width: 336px;
+	}
+	
+	#search
+	{
+		float: right;
+		margin: 25px 375px 0 0;
+		width: 320px;
+	}
+	#search-box
+	{
+		width: 216px;
+		margin: 0px;
+	}
+	
+	#search-action
+	{
+		float: right;
+		widht: 100px;	
+		margin: 35px 400px 0 0;
+	}
+	#search-action .btn
+	{
+		height: 30px;	
+	}
+	
+	#social
+	{
+		width: 91px;
+		float: right;	
+		margin: 38px -6px 0 0;
+	}
+	
+	#body
+	{
+		width: 550px;
+		margin: 0px 0px 0px 230px;
+		padding: 20px 80px;
+	}
+
+
+	
+	.play-button
+	{
+		float: right;		
+		background: url(/images/player_play.png);	
+		margin: 0px 5px;
+		height: 29px;
+		width: 29px;
+		cursor: pointer;
+	}
+	
+	.lyrics-button
+	{
+		float: right;		
+		background: url(/images/lyrics.png);	
+		margin: 0px 5px;
+		height: 29px;
+		width: 29px;
+		cursor: pointer;
+	}
+	.comments-button
+	{
+		float: right;		
+		background: url(/images/comments.png);	
+		margin: 0px 5px;
+		height: 29px;
+		width: 29px;
+		cursor: pointer;
+	}
+	.buy-button
+	{
+		float: right;		
+		background: url(/images/buy.png);	
+		margin: 0px 5px;
+		height: 29px;
+		width: 29px;
+		cursor: pointer;
+	}
+	.play-button:hover
+	{
+		background-position: 0 -29px;		
+	}
+	
+	.stop-button
+	{
+		float: right;		
+		background: url(/images/player_stop.png);	
+		margin: 0px 5px;
+		height: 29px;
+		width: 29px;
+		cursor: pointer;
+	}
+	.stop-button:hover
+	{
+		background-position: 0 -29px;		
+	}
+	
+	.play-loading
+	{
+		float: right;		
+		background: url(/images/player_loader.gif) 7px 8px no-repeat;	
+		margin: 0px 5px;
+		height: 29px;
+		width: 29px;
+		cursor: pointer;
+	}
+	
+	#body_home
+	{
+		width: 320px;
+		margin: 0px 0px 0px 500px;
+		padding: 10px 40px;
+	}
+
+	
+	#footer 
+	{
+		background: url(/images/content_footer.png) top center no-repeat;	
+		width: 100%;
+		margin: 50px 0 0 0;
+	}
+
+	
+	#footer h1
+	{
+		margin: 0px;
+		font-weight: normal;
+		font-size: 11px;
+	}
+
+	#footer_content
+	{
+		width: 795px;
+		margin: 0 auto;
+		padding: 0;
+		font-size: 12px;
+		color: #fff;
+	}
+	
+	#footer_content a
+	{
+		color: #fff;
+	}
+	
+	#footer_content td a
+	{
+		text-decoration: none;
+		color: #fff;
+		line-height: 18px;
+	}
+	
+	#footer-disclaimer
+	{
+		font-size: 9px;
+	}
+
+/* CSS for event List */
+	
+	#section-header
+	{
+		background: #171717;
+		margin: -12px 0 20px -20px;
+		width: 869px;
+		height: 60px;	
+		padding: 10px;
+		text-align: left;
+	}
+	
+	#section-header h1
+	{
+		color: #fff;
+		margin: 0px;
+		font-size: 26px;
+		font-weight: normal;
+	}
+	
+	#section-header h2
+	{
+		color: #fff;
+		margin: 0px;
+		font-size: 11px;
+		font-weight: normal;
+	}
+	
+	#events
+	{
+		width: 568px; 	
+		float: left;
+	}
+	
+	
+	
+	.event-item
+	{
+		background: #fff;	
+		height: 114px;
+		clear: both;
+		margin: 10px 0;
+		width: 568px;
+	}
+	
+	#events .position
+	{
+		float: left;
+		background: #000;	
+		color: #fff;
+		font-size: 17px;
+		width: 20px;
+		padding: 10px;
+		height: 96px;
+		
+	}
+	
+	#events .thumb
+	{
+		float: left;	
+		width: 116px;
+		height: 116px;
+		overflow: hidden;
+	}
+	
+	#events .info
+	{
+		padding: 10px;
+		float: left;
+		width: 383px;
+	}
+	
+	#events .info-box
+	{
+		height: 75px;
+	}
+	
+	#events .info h2
+	{    
+		font-size: 14px;
+		font-weight: bold;
+		padding-bottom: 2px;
+		margin: 0;
+	}
+	
+	#events .info h3
+	{    
+		font-size: 11px;
+		font-weight: normal;
+		padding-bottom: 2px;
+		margin: 10px 0 0 0;
+	}
+	
+	#events .info h4
+	{    
+		font-size: 11px;
+		font-weight: normal;
+	}
+	
+	#events .info .events-genres
+	{    
+		margin: 10px 0 0;
+		font-size: 11px;		
+	}
+	
+	#events .info .user
+	{    
+		margin: 3px 0 0;
+		font-size: 11px;		
+	}
+	
+	#events .info .song-stats
+	{    
+		margin: 3px 0 0;
+		font-size: 11px;		
+	}
+	
+	#events .controls
+	{
+		float: right;
+		width: 105px;
+		margin: 0 10px;
+	}
+	
+	#events .controls img
+	{
+		height: 10px;
+	}
+	
+	#events .controls li
+	{
+		list-style: none;
+		border-top: 1px dotted #3C424E;
+		padding: 5px;
+		font-size: 12px;
+		color: #3C424E;
+		font-weight: bold;
+		cursor: pointer;
+	}
+	
+	#events .controls li img
+	{ 
+		margin: 0 7px 0 0;
+	}
+	
+	.event-name
+	{
+		color: #0130a2;
+		cursor: pointer;	
+	}
+	
+	.event-name:hover
+	{
+		text-decoration: underline;
+	}
+	
+	.user-name
+	{
+		color: #0130a2;
+		cursor: pointer;	
+	}
+	
+	.user-name:hover
+	{
+		text-decoration: underline;
+	}
+	
+	.genre-name
+	{
+		color: #0130a2;
+		cursor: pointer;	
+	}
+	
+	.genre-name:hover
+	{
+		text-decoration: underline;
+	}
+	
+	#events .end-cap
+	{
+		float: right;
+		width: 25px;
+		background: #bd1e2d;	
+		height: 106px;
+		text-align: center;
+		padding: 5px
+	}
+	
+	#events .end-cap img
+	{
+		margin: 0 0 3px 0;
+		cursor: pointer;
+	}
+	
+	#section-selector
+	{
+		margin: -72px 0 0 -20px;
+		width: 891px;
+		height: 100px;	
+	}
+	
+	#section-selector .section-selector-item
+	{
+		height: 50px;	
+		width: 275px;
+		color: #fff;
+		float: left;
+		padding: 10px;
+		font-size: 26px;
+		cursor: pointer;
+		text-align: right;
+	}
+	
+	#event-selector
+	{
+		margin: -28px 0px 0px -20px;
+		width: 891px;
+		height: 60px;	
+	}
+	
+	#event-selector .event-selector-item
+	{
+		height: 36px;	
+		width: 87px;
+		color: #fff;
+		float: left;
+		padding: 5px;
+		font-size: 14px;
+		cursor: pointer;
+	}
+			
+	#flag-text
+	{
+		margin: 0 0 30px 0;
+	}
+		
+	.flag-questions
+	{
+		margin: 0;	
+	}
+	
+	.flag-question-buttons
+	{
+		text-align: center;
+		margin: 30px 0 0 0;
+	}
+	
+/* CSS for Users List */
+	
+	.users-item
+	{
+		background: #fff;	
+		height: 80px;
+		clear: both;
+		margin: 10px 0;
+	}
+	
+	#users .position
+	{
+		float: left;
+		background: #bd1e2d;	
+		color: #fff;
+		font-size: 24px;
+		width: 50px;
+		padding: 10px;
+		height: 60px;
+		
+	}
+	
+	#users .thumb
+	{
+		float: left;	
+		height: 80px;	
+		width: 80px;
+		overflow: hidden
+	}
+	
+	#users .info
+	{
+		padding: 10px;
+		float: left;
+		width: 645px;		
+	}
+	
+	#users .info h2
+	{    
+		font-size: 24px;
+		font-weight: normal;
+		padding-bottom: 2px;
+		margin: 0;
+	}
+	
+	#users .info h3
+	{    
+		font-size: 18px;
+		font-weight: normal;
+		padding-bottom: 2px;
+		margin: 0;
+	}
+	
+	#users .info h4
+	{    
+		font-size: 16px;
+		font-weight: normal;
+	}
+	
+	#users .stats
+	{
+		float: right;
+		text-align: right;	
+		font-size: 11px;
+		padding: 7px 0 0;
+	}
+	
+	#users .end-cap
+	{
+		float: right;
+		width: 25px;
+		background: #bd1e2d;	
+		height: 70px;
+		text-align: center;
+		padding: 5px
+	}
+	
+	#users .end-cap img
+	{
+		margin: 0 0 3px 0;
+		cursor: pointer;
+	}
+	
+	
+/* CSS for Suggest a Song */
+	
+	#event-add-results .info
+	{
+		padding: 8px;
+		float: left;
+		width: 350px;
+		font-size: 12px;
+	}
+	
+	#event-add-results .thumb
+	{
+		width: 75px; 
+		height: 75px; 
+		overflow:hidden; 
+		float: left; 
+		margin: 0 10px 0 0;
+		background: url(/images/noartplaceholder_75.png) 0 0 no-repeat;	
+	}
+	
+	
+	#event-add-results .position
+	{
+		float: left;
+		background: #000;	
+		color: #fff;
+		font-size: 24px;
+		width: 5px;
+		padding: 10px;
+		height: 55px;
+		
+	}
+	
+	#event-add-results .end-cap
+	{
+		float: right;
+		width: 25px;
+		background: #000;	
+		height: 65px;
+		text-align: center;
+		padding: 5px
+	}
+	
+	#event-add-results .end-cap img
+	{
+		margin: 3px 0 3px;
+		cursor: pointer;
+	}
+	
+	
+	
+/* CSS for Global Use */
+	
+	#review-thumb-container
+	{
+		width: 160px; 
+		height: 160px; 
+		overflow:hidden; 
+		float: left; 
+		background: url(/images/noartplaceholder_160.png) 0 0 no-repeat;	
+		border: 1px solid #b0b9c8;	
+	}
+	
+	.margin-right
+	{
+		margin: 0 2px 0 0;	
+	}
+	
+	.bold
+	{
+		font-weight: bold;
+	}
+	
+	.blue_1	
+	{
+		background-color: #61c3c5 !important;
+	}
+	
+	.blue_2
+	{
+		background-color: #39b4b7 !important;
+	}
+	
+	.blue_3
+	{
+		background-color: #30919e !important;
+	}
+	
+	
+	.green
+	{
+		background-color: #95c31a !important;
+	}
+	
+	.yellow
+	{
+		background-color: #fecd07 !important;
+		
+	}
+	
+	.blue
+	{
+		background-color: #207a92 !important;			
+	}
+	
+	.purple
+	{
+		background-color: #5a5180 !important;			
+	}
+	
+	.dark_blue
+	{
+		background-color: #20325e !important;			
+	}
+	
+	.grey
+	{
+		background-color: #424242 !important;			
+	}
+	
+	.black
+	{
+		background-color: #000 !important;			
+	}
+	
+	.no-border 
+	{
+		border: none !important;	
+	}
+	
+	.template
+	{
+		display: none;	
+	}
+	
+	.hidden
+	{
+		display: none;		
+	}
+
+	.small
+	{
+		font-size: 11px;	
+	}
+
+	.smaller
+	{
+		font-size: 9px;	
+	}
+	
+	.border-bottom
+	{
+		border-bottom: 1px solid #626262	
+	}
+	
+	.link
+	{
+		cursor: pointer;	
+	}
+	
+	.right
+	{
+		text-align: right;	
+	}
+	
+	.white
+	{
+		color: #fff;	
+	}
+	
+	
+	
+/* Song Comments and Details */
+
+
+	#event-header
+	{
+		background: #171717;
+		margin: -12px 0 20px -20px;
+		width: 869px;
+		height: 125px;	
+		padding: 10px;
+	}
+	
+	#event-header h1
+	{
+		color: #fff;
+		margin: 0px;
+		font-size: 26px;
+		font-weight: normal;
+		widows: 520px;
+	}
+	
+	#event-header h2
+	{
+		color: #fff;
+		margin: 0px;
+		font-size: 13px;
+		font-weight: normal;
+	}	
+	
+	#event-header h3
+	{
+		color: #fff;
+		margin: 0px;
+		font-size: 11px;
+		font-weight: normal;
+	}	
+	
+	#event-header a
+	{
+		color: #fff;
+	}
+	
+	#event-comments
+	{
+		padding: 10px;	
+	}
+	
+	#location-selector
+	{
+		margin: 10px 0 0 0;	
+	}
+	
+	#location
+	{
+		margin: 0 0 10px 0;	
+	}
+	
+	#location-box
+	{
+		width: 170px;
+	}
+	
+	#location .navbar-form input, #location .navbar-form select, #location .navbar-form .radio, #location .navbar-form .checkbox {
+	    margin-top: 0;
+	}
+
+	.event-left-column
+	{
+		float: left;
+		width: 	562px;
+		padding: 0px;
+	}
+	
+	.event-right-column
+	{
+		float: right;
+		width: 	257px;
+	}
+	
+	.column-content
+	{
+		background-color: #fff;	
+		font-size: 12px;
+		padding: 10px;
+	}
+	
+	
+	
+	.column-content a
+	{
+		color: #BD1E2D;
+	}
+	
+	
+	.event-title
+	{
+		background: #000;	
+		color: #fff;
+		font-size: 15px;
+		padding: 5px;
+	}
+	
+	#event-liked-who
+	{
+		padding: 5px;	
+	}
+	
+	#event-share img
+	{
+		margin: 5px;
+	}
+	
+	
+	
+	#debug
+	{
+		position: fixed;
+		top: 50px;
+		left: 50px;
+		width: 200px;
+		height: 300px;
+		background-color: white;
+		color: black;	
+		padding: 20px;
+	}
+	
+	.ticket-item 
+	{
+		height: 55px;
+	}
+	
+	#event-tickets-list
+	{
+		clear: both;	
+	}
+	
+	#event-tickets-list select
+	{
+		width: 45px;
+		margin: 0;
+		width: 50px;
+		border: 0px;
+		height: 21px;
+		padding: 0 5px;
+	}
+	
+	
+	#event-tickets-list .position
+	{
+		float: left;
+		background: #000;	
+		color: #fff;
+		font-size: 17px;
+		width: 20px;
+		padding: 10px;
+		height: 30px;
+		
+	}
+	
+	#event-tickets-list .info
+	{
+		padding: 10px;
+		float: left;
+		width: 482px;
+	}
+	
+	#event-tickets-list .info-box
+	{
+		height: 30px;
+	}
+	
+	#event-tickets-list .info h2
+	{    
+		font-size: 14px;
+		font-weight: bold;
+		padding-bottom: 2px;
+		margin: 0;
+	}
+	
+	#event-tickets-list .info h3
+	{    
+		font-size: 11px;
+		font-weight: normal;
+		padding-bottom: 2px;
+		margin: 10px 0 0 0;
+	}
+	
+	#event-tickets-list .info h4
+	{    
+		font-size: 11px;
+		font-weight: normal;
+	}
+	
+	#event-tickets-list .info .events-genres
+	{    
+		margin: 10px 0 0;
+		font-size: 11px;		
+	}
+	
+	#event-tickets-list .info .user
+	{    
+		margin: 3px 0 0;
+		font-size: 11px;		
+	}
+	
+	#event-tickets-list .info .song-stats
+	{    
+		margin: 3px 0 0;
+		font-size: 11px;		
+	}
+	
+	#event-tickets-list .controls
+	{
+		float: right;
+		width: 88px;
+	}
+	
+	#event-tickets-list .controls li
+	{
+		list-style: none;
+		border-top: 1px dotted #3C424E;
+		font-size: 12px;
+		color: #3C424E;
+		font-weight: bold;
+		cursor: pointer;
+	}
+	
+	#event-tickets-list .controls li img
+	{ 
+		margin: 0 7px 0 0;
+	}
+	
+	
+	
+	.cart-item 
+	{
+		height: 55px;
+		margin-bottom: 10px;
+	}
+	
+	#cart-tickets-list
+	{
+		clear: both;	
+	}
+	
+	
+	#cart-tickets-list .position
+	{
+		float: left;
+		background: #000;	
+		color: #fff;
+		font-size: 17px;
+		width: 20px;
+		padding: 10px;
+		height: 40px;
+		
+	}
+	
+	#cart-tickets-list .info
+	{
+		padding: 5px 0 0 10px;
+		float: left;
+		width: 462px;
+	}
+	
+	#cart-tickets-list .info-box
+	{
+		height: 40px;
+	}
+	
+	#cart-tickets-list .info h2
+	{    
+		font-size: 14px;
+		font-weight: bold;
+		padding-bottom: 2px;
+		margin: 0;
+	}
+	
+	#cart-tickets-list .info h3
+	{    
+		font-size: 11px;
+		font-weight: normal;
+		padding-bottom: 2px;
+		margin: 0;
+	}
+	
+	#cart-tickets-list .info h4
+	{    
+		font-size: 11px;
+		font-weight: normal;
+	}
+	
+	#cart-tickets-list .info .events-genres
+	{    
+		margin: 10px 0 0;
+		font-size: 11px;		
+	}
+	
+	#cart-tickets-list .info .user
+	{    
+		margin: 3px 0 0;
+		font-size: 11px;		
+	}
+	
+	#cart-tickets-list .info .song-stats
+	{    
+		margin: 3px 0 0;
+		font-size: 11px;		
+	}
+	
+	#cart-tickets-list .controls
+	{
+		float: right;
+		width: 1px;
+	}
+	
+	#cart-tickets-list .controls li
+	{
+		list-style: none;
+		border-top: 1px dotted #3C424E;
+		font-size: 12px;
+		color: #3C424E;
+		font-weight: bold;
+		cursor: pointer;
+	}
+	
+	#cart-tickets-list .controls li img
+	{ 
+		margin: 0 7px 0 0;
+	}
+	
+	
+	
+	
+	
+	#featured .thumb
+	{
+		float: left;	
+		width: 116px;
+		height: 116px;
+		overflow: hidden;
+	}
+	
+	#featured .info
+	{
+		padding: 10px;
+		float: left;
+		width: 307px;
+	}
+	
+	#featured .info-box
+	{
+		height: 75px;
+	}
+	
+	#featured .info h2
+	{    
+		font-size: 14px;
+		font-weight: bold;
+		padding-bottom: 2px;
+		margin: 0;
+	}
+	
+	#featured .info h3
+	{    
+		font-size: 11px;
+		font-weight: normal;
+		padding-bottom: 2px;
+		margin: 10px 0 0 0;
+	}
+	
+	#featured .info h4
+	{    
+		font-size: 11px;
+		font-weight: normal;
+	}
+	
+	#featured .info .events-genres
+	{    
+		margin: 10px 0 0;
+		font-size: 11px;		
+	}
+	
+	#featured .info .user
+	{    
+		margin: 3px 0 0;
+		font-size: 11px;		
+	}
+	
+	#featured .info .song-stats
+	{    
+		margin: 3px 0 0;
+		font-size: 11px;		
+	}
+	
+	#featured .controls
+	{
+		float: right;
+		width: 105px;
+		margin: 0 10px;
+	}
+	
+	#featured .controls img
+	{
+		height: 10px;
+	}
+	
+	#featured .controls li
+	{
+		list-style: none;
+		border-top: 1px dotted #3C424E;
+		padding: 5px;
+		font-size: 12px;
+		color: #3C424E;
+		font-weight: bold;
+		cursor: pointer;
+	}
+	
+	#featured .controls li img
+	{ 
+		margin: 0 7px 0 0;
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	#checkout-tickets-list .cart-item 
+	{
+		height: 70px;
+		margin-bottom: 10px;
+		background-color:#e6e6e6;
+	}
+	
+	
+	.checkout-item 
+	{
+		height: 55px;
+		margin-bottom: 10px;
+	}
+	
+	#checkout-tickets-list
+	{
+		clear: both;	
+		font-size: 12px;
+	}
+	
+	
+	#checkout-tickets-list .position
+	{
+		float: left;
+		background: #000;	
+		color: #fff;
+		font-size: 17px;
+		width: 20px;
+		padding: 10px;
+		height: 50px;
+		
+	}
+	
+	#checkout-tickets-list .info
+	{
+		padding: 7px 0 0 10px;
+		float: left;
+	}
+	
+	#checkout-tickets-list .info-box
+	{
+		height: 40px;
+	}
+	
+	#checkout-tickets-list .info h2
+	{    
+		font-size: 14px;
+		font-weight: bold;
+		padding-bottom: 2px;
+		margin: 0;
+	}
+	
+	#checkout-tickets-list .info h3
+	{    
+		font-size: 11px;
+		font-weight: normal;
+		padding-bottom: 2px;
+		margin: 0;
+	}
+	
+	#checkout-tickets-list .info h4
+	{    
+		font-size: 11px;
+		font-weight: normal;
+	}
+	
+	#checkout-tickets-list .info .events-genres
+	{    
+		margin: 10px 0 0;
+		font-size: 11px;		
+	}
+	
+	#checkout-tickets-list .info .user
+	{    
+		margin: 3px 0 0;
+		font-size: 11px;		
+	}
+	
+	#checkout-tickets-list .info .song-stats
+	{    
+		margin: 3px 0 0;
+		font-size: 11px;		
+	}
+	
+	#checkout-tickets-list .controls
+	{
+		float: right;
+		width: 1px;
+	}
+	
+	#checkout-tickets-list .controls li
+	{
+		list-style: none;
+		border-top: 1px dotted #3C424E;
+		font-size: 12px;
+		color: #3C424E;
+		font-weight: bold;
+		cursor: pointer;
+	}
+	
+	#checkout-tickets-list .controls li img
+	{ 
+		margin: 0 7px 0 0;
+	}
+	
+	
+	#checkout-info .form-horizontal .control-label {
+		width: 120px;
+	}
+	
+	#checkout-info .form-horizontal .controls {
+		margin-left: 140px;
+	}
+	
+	
+	#checkout-delivery #content {
+		font-size: 11px;	
+	}
+	
+	
+	.required
+	{
+		color: #BD1E2D;
+	}
+	
+	
+	
+	
+	#checkout-delivery .form-horizontal .control-label {
+		width: 120px;
+	}
+	
+	#checkout-delivery .form-horizontal .controls {
+		margin-left: 140px;
+	}
+	
+	
+	
+	
+	
+	#ticket_page
+	{
+		width: 592px;
+	}
+	
+	#ticket-template
+	{
+		width: 650px;
+		height: 592px;
+	}
+	
+	@media all {
+		.page-break  { display: none; }
+	}
+	
+	@media print {
+		#printDiag { display: none; }
+	}
+	

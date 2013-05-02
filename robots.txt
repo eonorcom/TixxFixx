@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: /Classes/
+Disallow: /facebook/
+Disallow: /include/
+Disallow: /twitter/
+Allow: /
