@@ -73,8 +73,9 @@ if ($EventID != "")
 	$Price = $row['Price'];
 	$Tickets = $row['Tickets'];
 	
-	$StartTime = new DateTime($row["StartTime"]);
-	$StopTime = new DateTime($row["StopTime"]);
+	$StartTime = strtotime($row["StartTime"]);
+	$StopTime = strtotime($row["StopTime"]);
+
 	$Created = new DateTime($row["Created"]);
 	
 	$EventUrl = cleanURL($row["SourceURL"]);
@@ -117,29 +118,32 @@ function cleanURL($url)
     <meta name="keywords" content="<?php echo $_SESSION['location'] ?>,  events,  concerts,  tickets,  concert tickets, buy  tickets, sell  tickets, trade  tickets">
     <meta name="description" content="TixxFixx  - Your Ticket Solution- Your place to buy, sell, trade, consign or upgrade your event or concert tickets.">
 
-   	<?php include($_SERVER['DOCUMENT_ROOT']."/include/template/head.php");  ?>    
-    
-    
-    <link href="/include/css/datetimepicker.css" rel="stylesheet"/>
-	<script src="/include/js/bootstrap-datetimepicker.js"></script>
-    
+
+
+   	<?php include($_SERVER['DOCUMENT_ROOT']."/include/template/head.php");  ?>
+
+
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
+    <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+
+
+    <link rel="stylesheet" href="/include/css/jquery.timepicker.css" type="text/css">
+    <script type="text/javascript" src="/include/js/jquery.timepicker.js"></script>
+
+
     <link href="/include/css/select2.css" rel="stylesheet"/>
-	<script src="/include/js/select2.min.js"></script>
-    
-    
+    <script src="/include/js/select2.min.js"></script>
+
+
     <script>
-	    $(document).ready(function() { 
-			
-			$(".form_datetime").datetimepicker({
-				todayBtn:  1,
-				autoclose: 1,
-				todayHighlight: 1,
-				startView: 2,
-				forceParse: 1,
-				showMeridian: 1,
-				format: 'mm-dd-yyyy H:ii P'
-			});
-		
+	    $(document).ready(function() {
+
+            $("#StartDate").datepicker();
+            $("#StartTime").timepicker({ 'scrollDefaultNow': true });
+
+            $("#StopDate").datepicker();
+            $("#StopTime").timepicker({ 'scrollDefaultNow': true });
+
 			$("#select-venue").select2({
 				placeholder: "Select a Venue",
 				 allowClear: true
@@ -226,7 +230,7 @@ function cleanURL($url)
 			
 			if ($('#add-category').is(":checked"))
 			{
-				
+
 				if ($("#Category").val() == "")
 				{
 					alert("Please enter a CATEGORY")
@@ -345,21 +349,18 @@ function cleanURL($url)
                             
                             <div class="control-group">
                             
-                            	<label class="control-label" for="StartTime">Start Time</label>
-                                <div class="controls input-append date form_datetime" style="display:inherit" data-date="<?php echo $StartTime->format('m-d-Y h:i A') ?>" data-date-format="mm-dd-yyyy H:i P">
-                                    <input size="16" type="text" id="StartTime" name="StartTime" value="<?php echo $StartTime->format('m-d-Y h:i A') ?>" readonly>
-                                    <span class="add-on"><i class="icon-remove"></i></span>
-                                    <span class="add-on"><i class="icon-th"></i></span>
+                            	<label class="control-label" for="StartTime">Event Date</label>
+                                <div class="controls">
+                                    <input size="16" type="text" id="StartDate" name="StartDate" value="<?php echo date ("m/d/Y", $StartTime) ?>" style="width: 100px;">&nbsp;&nbsp;
                                 </div>
                             </div>
                             
                             <div class="control-group">
                             
-                            	<label class="control-label" for="StopTime">Stop Time</label>
-                                <div class="controls input-append date form_datetime" style="display:inherit" data-date="<?php echo $StopTime->format('m-d-Y h:i A') ?>" data-date-format="mm-dd-yyyy H:i P">
-                                    <input size="16" type="text" id="StopTime" name="StopTime" value="<?php echo $StopTime->format('m-d-Y h:i A') ?>" readonly>
-                                    <span class="add-on"><i class="icon-remove"></i></span>
-                                    <span class="add-on"><i class="icon-th"></i></span>
+                            	<label class="control-label" for="StopTime">Event Time</label>
+                                <div class="controls">
+                                    <input type="text" id="StartTime" name="StartTime" value="<?php echo date ("H:ia", $StartTime) ?>" class="time" style="width: 100px;"> to
+                                    <input type="text" id="StopTime" name="StopTime" value="<?php echo date ("H:ia", $StopTime) ?>" class="time" style="width: 100px;">
                                 </div>
                             </div>
                             

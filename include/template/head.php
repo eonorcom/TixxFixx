@@ -11,9 +11,12 @@
 	</script>
 
     <link href="/include/css/bootstrap.css" rel="stylesheet" media="screen">
-    <link rel="stylesheet" href="/include/css/style.css" type="text/css">    
-	
-    <script type="text/javascript" src="http://code.jquery.com/jquery-1.4.4.min.js"></script>    
+    <link rel="stylesheet" href="/include/css/style.css" type="text/css">
+
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
+    <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+    <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+
 	<script type="text/javascript" src="/include/js/jquery.min.js"></script>
     <script type="text/javascript" src="/include/js/jquery.timeago.js"></script>
     <script type="text/javascript" src="/include/js/jquery.cookie.js"></script>

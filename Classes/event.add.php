@@ -28,19 +28,10 @@
 	$Description = $_POST['Description'];
 	$Price = $_POST['Price'];
 	$Free = $_POST['Free'];
-	
-	
-	if ($_POST['StartTime'] == "")
-	{
-		$StartTime = NULL;
-	}
-	if ($_POST['StopTime'] == "")
-	{
-		$StopTime = NULL;
-	}
-	
-	
-	
+
+    $StartTime = strtotime($_POST['StartDate'] . " " . $_POST['StartTime']);
+    $StopTime = strtotime($_POST['StartDate'] . " " . $_POST['StopTime']);
+
 	if ($EventID == "")
 	{
 		$EventID = $NewEventID;
@@ -52,7 +43,9 @@
 		$AddVenue = 1;
 	}
 	$EventUrl = "/boise/events/" . str_replace(" ", "-", strtolower($Title)) . "/" .$EventID;
-	
+
+
+
 	data_events($EventID,$MarketID,$VenueID,$Title,$Description,$Free,$Price,$StartTime,$StopTime,'','','tixx',$EventUrl);
 	
 	if ($AddVenue == 1)
