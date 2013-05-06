@@ -75,7 +75,17 @@
 	
 	foreach ($events['events']['event'] as $event) {
 		//import events
-		data_events($event['id'],$MarketID,$event['venue_id'],$event['title'],$event['description'],$event['free'],$event['price'],$event['start_time'],$event['stop_time'],$event['created'],$event['modified'],$source,$event['url']);
+
+        $data_price = $event['price'];
+        $data_desc = $event['description'];
+
+        if (strlen($data_price) > 512)
+        {
+            $data_desc = $data_desc . " " . $data_price;
+            $data_price = "";
+        }
+
+		data_events($event['id'],$MarketID,$event['venue_id'],$event['title'],$data_desc,$event['free'],$data_price,$event['start_time'],$event['stop_time'],$event['created'],$event['modified'],$source,$event['url']);
 		
 		//import venues
 		data_venues($event['venue_id'],$MarketID,$event['venue_name'],$event['venue_address'],$event['city_name'],$event['region_abbr'],$event['postal_code'],$event['country_abbr'],$event['latitude'],$event['longitude'],$source,$event['venue_url']);
