@@ -73,7 +73,7 @@ function cleanURL($url)
                         </div>
                         
                         <div style="display: ;">
-                            <div class="event-title">Browse by date</div>
+                            <div class="event-title">Browse By Date</div>
                    
                             <div id="event-dates">
                                 <ul class="columnar columns-3">
@@ -95,7 +95,7 @@ function cleanURL($url)
                 
                 
                         
-                        <div class="event-title">Browse events</div>
+                        <div class="event-title">Browse Events</div>
                         
                             <div id="event-categories">
                                 <ul class="columnar columns-3">  
