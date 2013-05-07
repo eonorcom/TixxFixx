@@ -40,7 +40,10 @@ function cleanURL($url)
                     <a href="<?php echo $_SESSION['location_url'] ?>/events/other" class="event-selector-item grey">Other</a>
                 </div>
                 <div id="section-header">
-                	<h1 id="section-title"><?php echo $CategoryDescription ?></h1>
+
+                    <?php include($_SERVER['DOCUMENT_ROOT']."/include/template/search.php");  ?>
+
+                    <h1 id="section-title"><?php echo $CategoryDescription ?></h1>
                     <h2 id="section-desc">Your place to buy, sell, trade, consign or upgrade your event or concert tickets.</h2>
                 </div>
                 

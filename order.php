@@ -309,10 +309,7 @@ session_start();
 			<div id="social">
             	<?php include($_SERVER['DOCUMENT_ROOT']."/include/template/social.php");  ?>            	
 	        </div>
-    
-            <?php include($_SERVER['DOCUMENT_ROOT']."/include/template/search.php");  ?>
-            
-    
+
     		<div id="logo"><a href="/" title="TixxFixx.com"><img src="/images/logo.png" width="206" height="121" /></a></div>
             
             <div id="contet_body">
@@ -342,6 +339,9 @@ session_start();
 				?>
                 
                     <div id="section-header">
+
+                        <?php include($_SERVER['DOCUMENT_ROOT']."/include/template/search.php");  ?>
+
                         <h1 id="section-title">Order Error</h1>
                         <h2 id="section-desc">There was a problem with your order.  Please review the below information and contact us if you have any questions.</h2>
                     </div>
@@ -375,6 +375,9 @@ session_start();
 				?>
                     
                     <div id="section-header">
+
+                        <?php include($_SERVER['DOCUMENT_ROOT']."/include/template/search.php");  ?>
+
                         <h1 id="section-title">Order Complete</h1>
                         <h2 id="section-desc">Transaction #: <?php echo $transactionId ?>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Order Date: <?php echo $OrderTime->format('m/d/Y g:i A'); ?></h2>
                     </div>

@@ -188,10 +188,7 @@ if (isset($SongID))
 			<div id="social">
             	<?php include($_SERVER['DOCUMENT_ROOT']."/include/template/social.php");  ?>            	
 	        </div>
-    
-            <?php include($_SERVER['DOCUMENT_ROOT']."/include/template/search.php");  ?>
-            
-    
+
     		<div id="logo"><img src="/images/logo.png" width="206" height="121" /></div>
             
             <div id="contet_body">

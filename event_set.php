@@ -280,8 +280,7 @@ function cleanURL($url)
 			<div id="social">
             	<?php include($_SERVER['DOCUMENT_ROOT']."/include/template/social.php");  ?>            	
 	        </div>
-    
-            <?php include($_SERVER['DOCUMENT_ROOT']."/include/template/search.php");  ?>
+
     
     		<div id="logo"><a href="/" title="TixxFixx.com"><img src="/images/logo.png" width="206" height="121" /></a></div>
             
@@ -306,6 +305,9 @@ function cleanURL($url)
                     <a href="<?php echo $_SESSION['location_url'] ?>/events/other" class="event-selector-item grey">Other</a>
                 </div>
                 <div id="section-header">
+
+                    <?php include($_SERVER['DOCUMENT_ROOT']."/include/template/search.php");  ?>
+
                 	<h1 id="section-title">Add Event</h1>
                     <h2 id="section-desc">This is the spot that you can add events to the TixxFixx System.</h2>
                 </div>

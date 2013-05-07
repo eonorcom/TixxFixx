@@ -13,10 +13,7 @@ session_start();
 			<div id="social">
             	<?php include($_SERVER['DOCUMENT_ROOT']."/include/template/social.php");  ?>            	
 	        </div>
-    
-            <?php include($_SERVER['DOCUMENT_ROOT']."/include/template/search.php");  ?>
-            
-    
+
     		<div id="logo"><a href="/" title="TixxFixx.com"><img src="/images/logo.png" width="206" height="121" /></a></div>
             
             <div id="contet_body">

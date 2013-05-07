@@ -121,6 +121,9 @@ while($row = mysql_fetch_array($results)) {
         <a href="<?php echo $_SESSION['location_url'] ?>/events/other" class="event-selector-item grey">Other</a>
     </div>
     <div id="section-header">
+
+        <?php include($_SERVER['DOCUMENT_ROOT']."/include/template/search.php");  ?>
+
         <h1 id="section-title">Checkout</h1>
         <h2 id="section-desc"></h2>
     </div>
