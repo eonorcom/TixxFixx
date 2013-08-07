@@ -18,9 +18,6 @@ function data_events(
 ) 
 {
 
-    //echo ($StartTime . " to " . $StopTime . "<p>");
-    //echo (date ("Y-m-d H:i:s", $StartTime) . " to " . date ("Y-m-d H:i:s", $StopTime) . "<p>");
-
 	$import = sprintf("INSERT INTO data_events (
 			EventID,MarketID,VenueID,Title,Description,Free,Price,StartTime,StopTime,Created,Modified,Source,SourceURL,Imported
 		)
@@ -48,10 +45,10 @@ function data_events(
 		mysql_real_escape_string($Description),
 		mysql_real_escape_string($Free),
 		mysql_real_escape_string($Price),
-        $StartTime == '' ? "NULL" : "'" . date ("Y-m-d H:i:s", $StartTime) . "'",
-        $StopTime == '' ? "NULL" : "'" . date ("Y-m-d H:i:s", $StopTime) . "'",
-        $Created == '' ? "NULL" : "'" . date ("Y-m-d H:i:s", $Created) . "'",
-        $Modified == '' ? "NULL" : "'" . date ("Y-m-d H:i:s", $Modified) . "'",
+        $StartTime == '' ? "NULL" : "'" . $StartTime . "'",
+        $StopTime == '' ? "NULL" : "'" . $StopTime . "'",
+        $Created == '' ? "NULL" : "'" . $Created . "'",
+        $Modified == '' ? "NULL" : "'" . $Modified . "'",
 		mysql_real_escape_string($Source),
 		mysql_real_escape_string($SourceURL),
 		mysql_real_escape_string($VenueID),
@@ -59,15 +56,13 @@ function data_events(
 		mysql_real_escape_string($Description),
 		mysql_real_escape_string($Free),
 		mysql_real_escape_string($Price),
-        $StartTime == '' ? "NULL" : "'" . date ("Y-m-d H:i:s", $StartTime) . "'",
-        $StopTime == '' ? "NULL" : "'" . date ("Y-m-d H:i:s", $StopTime) . "'",
-        $Created == '' ? "NULL" : "'" . date ("Y-m-d H:i:s", $Created) . "'",
-        $Modified == '' ? "NULL" : "'" . date ("Y-m-d H:i:s", $Modified) . "'",
+        $StartTime == '' ? "NULL" : "'" . $StartTime . "'",
+        $StopTime == '' ? "NULL" : "'" . $StopTime . "'",
+        $Created == '' ? "NULL" : "'" . $Created . "'",
+        $Modified == '' ? "NULL" : "'" . $Modified . "'",
 		mysql_real_escape_string($Source),
 		mysql_real_escape_string($SourceURL));
 
-    //echo ($import);
-    //exit;
 
 	$result = mysql_query($import);	
 	$error = mysql_error() != '' ? true : false;
