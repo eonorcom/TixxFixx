@@ -55,8 +55,8 @@
 		$data_desc = "";
 		$free = "";
 		$data_price = "";
-		$start_time = date('Y-m-d H:i:s', strtotime(str_replace('-', '/', $event['PlayDate'])));
-		$stop_time = date('Y-m-d H:i:s', strtotime(str_replace('-', '/', $event['PlayDate'])));
+		$start_time = date('Y-m-d H:i:s', strtotime(str_replace('-', '/', $event['PlayDate'] . ' ' . $event['PlayTime'] )));
+		$stop_time = date('Y-m-d H:i:s', strtotime(str_replace('-', '/', $event['PlayDate'] . ' ' . $event['PlayTime'] )));
 		$created = date('Y-m-d H:i:s', strtotime(str_replace('-', '/', $event['UpdatedTime'])));
 		$modified = date('Y-m-d H:i:s', strtotime(str_replace('-', '/', $event['UpdatedTime'])));
 		
