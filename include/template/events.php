@@ -218,7 +218,7 @@ function cleanURL($url)
                                         
                                         <h3><?php echo $StartTime->format('m-d-Y h:i A') ?><br /><?php echo $row["VenueName"] ?> - <?php echo $row["City"] ?>, <?php echo $row["Region"] ?></h3>
                                         
-                                        <h3>Category: <?php echo $row["Namespace"] ?></h3>
+                                        <h3>Category: <?php echo $row["Namespace"] ?>&nbsp;&nbsp;&nbsp;&nbsp;Source: <?php echo $row["Source"] ?></h3>
                                     </div>
                                     
                                     <div class="small" style="margin: 10px 0 0; display: none;">Source: <?php echo $Source ?>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Price: <?php echo $Price ?></div>
@@ -337,7 +337,7 @@ function cleanURL($url)
 								Limit 50
 								";
 						}
-						echo '<div style="display: none" id="sql">'.$sql.'</div>';
+						echo '<div style="display: none; margin: 20px;" id="sql">'.$sql.'</div>';
 						$results = mysql_query($sql, $connection);
 						$cnt = 1;
 						$cntAd = 0;
@@ -386,7 +386,7 @@ function cleanURL($url)
                                         <h3><?php echo $StartTime->format('m-d-Y h:i A') ?><br /><?php echo $row["VenueName"] ?> - <?php echo $row["City"] ?>, <?php echo $row["Region"] ?></h3>
                                         
                                         
-                                        <h3>Category: <?php echo $row["Namespace"] ?></h3>
+                                        <h3>Category: <?php echo $row["Namespace"] ?>&nbsp;&nbsp;&nbsp;&nbsp;Source: <?php echo $row["Source"] ?></h3>
                                     </div>
                                     
                                     <div class="small" style="margin: 10px 0 0; display: none;">Source: <?php echo $row["Source"] ?>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Price: <?php echo $row["Price"] ?></div>

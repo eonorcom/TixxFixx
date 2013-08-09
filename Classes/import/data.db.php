@@ -384,8 +384,10 @@ function data_performers(
 function data_event_performers(
 	$EventID,
 	$PerformerID
-) 
-{	
+)
+{
+	
+	$result = mysql_query($import);	
 	$import = sprintf("INSERT IGNORE INTO data_event_performers (
 			EventID,PerformerID
 		)
@@ -396,7 +398,31 @@ function data_event_performers(
 	mysql_real_escape_string($EventID),
 	mysql_real_escape_string($PerformerID));
 	//echo $import . "\n\n";
-	$result = mysql_query($import);	
+	$result = mysql_query($import);
+	$error = mysql_error() != '' ? true : false;
+	
+	if($error)
+	{
+		echo '<b>Post:</b><br>';
+		print_r($_POST);
+		echo '<br><br><b>Error:</b><br>' . mysql_error() . '<br><br>';
+		echo '<b>Query:</b><br>' . $import . '<br><br>';
+		exit;
+	}
+}
+	
+ 
+ 
+function data_get_venue(
+	$Name
+) 
+{		
+	$VenueID = "";
+	
+	$sql = sprintf("select * from data_venues where Name = '%s'",
+	mysql_real_escape_string($Name));
+	
+	$result = mysql_query($sql);	
 	$error = mysql_error() != '' ? true : false;
 	
 	if($error)
@@ -408,6 +434,40 @@ function data_event_performers(
 		exit;
 	}
 	
+	while($row = mysql_fetch_array($result, MYSQL_ASSOC)) {
+		$VenueID = $row["VenueID"];
+	}
+	
+	return $VenueID;
+}
+ 
+ 
+function data_get_performer(
+	$Name
+) 
+{		
+	$PerformerID = "";
+	
+	$sql = sprintf("select * from data_performers where Name = '%s'",
+	mysql_real_escape_string($Name));
+	
+	$result = mysql_query($sql);	
+	$error = mysql_error() != '' ? true : false;
+	
+	if($error)
+	{
+		echo '<b>Post:</b><br>';
+		print_r($_POST);
+		echo '<br><br><b>Error:</b><br>' . mysql_error() . '<br><br>';
+		echo '<b>Query:</b><br>' . $import . '<br><br>';
+		exit;
+	}
+	
+	while($row = mysql_fetch_array($result, MYSQL_ASSOC)) {
+		$PerformerID = $row["PerformerID"];
+	}
+	
+	return $PerformerID;
 }
  
 ?>

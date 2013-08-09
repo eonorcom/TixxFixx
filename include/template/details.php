@@ -79,6 +79,8 @@ function cleanURL($url)
 						$StopTime = new DateTime($row["StopTime"]);
 						$Created = new DateTime($row["Created"]);
 						
+						
+						$Source = $row["Source"];
 						$EventUrl = cleanURL($row["SourceURL"]);
 						$VenueUrl = cleanURL($row["VenueSourceUrl"]);
 						
@@ -147,7 +149,9 @@ function cleanURL($url)
                                     	} 
 									}
 									?>
-                                
+                                	
+                                    <p><small>Source: <?php echo $Source ?></small></p>
+                                    
                                 	<hr />
                                     
 

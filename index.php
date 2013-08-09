@@ -3,7 +3,7 @@ include($_SERVER['DOCUMENT_ROOT']."/include/config/dbconfig.php");
 
 //Always place this code at the top of the Page
 session_start();
-$Debug = "";
+$Debug = "--true";
 
 if($ShowLandingPage != "")
 {
