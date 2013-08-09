@@ -31,12 +31,13 @@
 	$args = array(
 		'cityID' => '10100',
 		'radius' => '50', // "All", "Future", "Past", "Today", "Last Week", "This Week", "Next week", and months by name, e.g. "October"
-		'StartDate' => '8/7/2013',
+		'StartDate' => date('m/d/Y'),
 		'DayCount' => '360',
 		'Page' => '1',
 		'pageSize' => '50',
 		'apiKey' => $app_key
 	);
+	
 
 	$events = $evdb->call('api/pollstar.asmx/CityEvents', $args);
 	
