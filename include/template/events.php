@@ -102,7 +102,7 @@ function cleanURL($url)
                                   <li>
                                         <?php 
                             
-                                        $sql = "select DISTINCT c.Namespace, c.Description from data_event_categories e inner join data_categories c on c.Namespace = e.Namespace order by c.Namespace";
+                                        $sql = "select DISTINCT c.Namespace, c.Description from data_event_categories e inner join data_categories c on c.Namespace = e.Namespace order by c.Description";
                                         $results = mysql_query($sql, $connection);
                                         $cnt = 1;
                                         $cntAd = 0;
