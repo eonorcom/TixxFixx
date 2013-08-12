@@ -470,4 +470,20 @@ function data_get_performer(
 	return $PerformerID;
 }
  
+function data_cleanup()
+{	
+	$sql = "call Duplicates()";
+	$result = mysql_query($sql);	
+	$error = mysql_error() != '' ? true : false;
+	
+	if($error)
+	{
+		echo '<b>Post:</b><br>';
+		print_r($_POST);
+		echo '<br><br><b>Error:</b><br>' . mysql_error() . '<br><br>';
+		echo '<b>Query:</b><br>' . $import . '<br><br>';
+		exit;
+	}
+}
+ 
 ?>

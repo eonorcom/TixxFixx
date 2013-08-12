@@ -124,6 +124,7 @@
 	}
 	$time_end = microtime(true);
 	$execution_time = ($time_end - $time_start);
+	data_cleanup();
 	
 	echo 'Total Execution Time: '.$execution_time.' sec.   Last Event Date: ' .$LastStartTime .'   Session Count: '. $_SESSION['count'] . '';
 	

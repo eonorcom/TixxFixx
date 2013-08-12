@@ -214,7 +214,7 @@ function cleanURL($url)
                                 <div class="info">
                                     
                                     <div class="info-box">
-                                        <h2><a href="<?php echo $EventUrl ?>"><?php echo $row["Title"] ?></a></h2>
+                                        <h2><a href="<?php echo $EventUrl ?>"><?php echo substr($row["Title"],0, 10) ?></a></h2>
                                         
                                         <h3><?php echo $StartTime->format('m-d-Y h:i A') ?><br /><?php echo $row["VenueName"] ?> - <?php echo $row["City"] ?>, <?php echo $row["Region"] ?></h3>
                                         
@@ -381,7 +381,7 @@ function cleanURL($url)
                                     
                                     
                                     <div class="info-box">
-                                        <h2><a href="<?php echo $EventUrl ?>"><?php echo $row["Title"] ?></a><?php if ($_SESSION['contributor'] == 1) { ?>&nbsp;&nbsp;<small class="link" onclick="deleteEvent('<?php echo $row["EventID"] ?>')">remove</small><?php } ?></h2>
+                                        <h2><a href="<?php echo $EventUrl ?>"><?php echo substr($row["Title"],0, 53) ?> <?php if (strlen($row["Title"]) > 53) { echo "..."; } ?></a><?php if ($_SESSION['contributor'] == 1) { ?>&nbsp;&nbsp;<small class="link" onclick="deleteEvent('<?php echo $row["EventID"] ?>')">remove</small><?php } ?></h2>
                                         
                                         <h3><?php echo $StartTime->format('m-d-Y h:i A') ?><br /><?php echo $row["VenueName"] ?> - <?php echo $row["City"] ?>, <?php echo $row["Region"] ?></h3>
                                         
