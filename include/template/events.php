@@ -214,7 +214,7 @@ function cleanURL($url)
                                 <div class="info">
                                     
                                     <div class="info-box">
-                                        <h2><a href="<?php echo $EventUrl ?>"><?php echo substr($row["Title"],0, 10) ?></a></h2>
+                                        <h2><a href="<?php echo $EventUrl ?>"><?php echo substr($row["Title"],0, 80) ?> <?php if (strlen($row["Title"]) > 80) { echo "..."; } ?></a></h2>
                                         
                                         <h3><?php echo $StartTime->format('m-d-Y h:i A') ?><br /><?php echo $row["VenueName"] ?> - <?php echo $row["City"] ?>, <?php echo $row["Region"] ?></h3>
                                         
@@ -256,7 +256,7 @@ function cleanURL($url)
 						}
 					?>
                     <div class="event-liked-title" style="margin-top: 30px; margin-bottom: -10px; width: 558px; float: left;">
-                        <?php if ($CategoryDescription != "TixxFixx.com") { ?>
+                        <?php if ($CategoryDescription != "") { ?>
                         	<a href="/">All Events</a> : <a href="/boise/events/<?php echo $category ?>"><?php echo $CategoryDescription ?></a>
                         <?php } else { ?>
                         	<a href="/">All Events</a>
